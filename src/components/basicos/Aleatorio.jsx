@@ -1,17 +1,21 @@
 import React from "react";
 
 export default (props) => {
+  const { min, max } = props;
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
   }
   return (
-    <React.Fragment>
+    <>
+      <h2>Valor Aleatório</h2>
       <p>
-        <strong>Número aleatório entre {props.min} e {props.max}</strong> {'=>'} {" "}
-        {getRandomInt(props.min, props.max)}
+        <strong>
+          Número aleatório entre {min} e {max}
+        </strong>{" "}
+        {"=>"} {getRandomInt(min, max)}
       </p>
-    </React.Fragment>
+    </>
   );
 };
