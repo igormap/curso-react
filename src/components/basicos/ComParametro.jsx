@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ComParametro(props) {
+function ComParametro(props) {
   return (
     <div>
       <h2>{props.titulo}</h2>
@@ -8,3 +8,5 @@ export default function ComParametro(props) {
     </div>
   );
 }
+
+export default ComParametro;

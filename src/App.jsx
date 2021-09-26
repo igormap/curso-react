@@ -12,7 +12,7 @@ import ComParametro from "./components/basicos/ComParametro";
 import Fragmento from "./components/basicos/Fragmento";
 import Aleatorio from "./components/basicos/Aleatorio";
 
-export default (_) => (
+function App(_) {
   <div className="App">
     <h1>Fundamentos React</h1>
 
@@ -52,5 +52,7 @@ export default (_) => (
         <Primeiro />
       </Card>
     </div>
-  </div>
-);
+  </div>;
+}
+
+export default App

@@ -1,14 +1,14 @@
 import React from "react";
 import produtos from "../../data/produtos";
-import './TabelaProdutos.css'
+import "./TabelaProdutos.css";
 
-export default (props) => {
+function TabelaProdutos(props) {
   const listaProdutos = produtos.map((produto, i) => {
     return (
-      <tr key={produtos.id} className={i % 2 == 0 ? 'Par' : 'Impar'}>
+      <tr key={produtos.id} className={i % 2 === 0 ? "Par" : "Impar"}>
         <td>{produto.id}</td>
         <td>{produto.nome}</td>
-        <td>R$ {produto.preco.replace('.', ',')}</td>
+        <td>R$ {produto.preco.replace(".", ",")}</td>
       </tr>
     );
   });
@@ -25,4 +25,6 @@ export default (props) => {
       </table>
     </div>
   );
-};
+}
+
+export default TabelaProdutos;

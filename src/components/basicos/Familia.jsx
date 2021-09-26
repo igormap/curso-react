@@ -1,6 +1,6 @@
 import React, { cloneElement } from "react";
 
-export default (props) => {
+function Familia(props) {
   return (
     <div>
       {props.children.map((child, i) => {
@@ -8,4 +8,6 @@ export default (props) => {
       })}
     </div>
   );
-};
+}
+
+export default Familia;
