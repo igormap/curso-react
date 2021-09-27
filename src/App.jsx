@@ -2,6 +2,8 @@ import React from "react";
 
 import "./App.css";
 
+import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import ParOuImpar from "./components/condicional/ParOuImpar";
 import TabelaProdutos from "./components/repeticao/TabelaProdutos";
 import ListaAlunos from "./components/repeticao/ListaAlunos.";
 import Familia from "./components/basicos/Familia";
@@ -12,11 +14,18 @@ import ComParametro from "./components/basicos/ComParametro";
 import Fragmento from "./components/basicos/Fragmento";
 import Aleatorio from "./components/basicos/Aleatorio";
 
-function App(_) {
+// eslint-disable-next-line
+export default (_) => (
   <div className="App">
     <h1>Fundamentos React</h1>
 
     <div className="Cards">
+      <Card titulo="#08 - Renderização Condicional" color="#982395">
+        <ParOuImpar numero={21} />
+        <UsuarioInfo usuario={{ nome: "Fernando" }} />
+        <UsuarioInfo usuario={{}} />
+      </Card>
+
       <Card titulo="#07 - Desafio Repetição" color="#3A9AD9">
         <TabelaProdutos />
       </Card>
@@ -52,7 +61,5 @@ function App(_) {
         <Primeiro />
       </Card>
     </div>
-  </div>;
-}
-
-export default App
+  </div>
+);
